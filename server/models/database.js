@@ -162,8 +162,8 @@ export function initDatabase() {
   `);
 
   insertSetting.run('donation_goal', '50000000');
-  insertSetting.run('donation_current', '32400000');
-  insertSetting.run('visitor_count', '3247');
+  insertSetting.run('donation_current', '0');
+  insertSetting.run('visitor_count', '0');
   insertSetting.run('site_name_ko', '엘림G선교회');
   insertSetting.run('site_name_en', 'Elim G Mission');
   insertSetting.run('default_language', 'ko');
