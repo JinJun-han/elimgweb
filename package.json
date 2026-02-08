@@ -1,0 +1,31 @@
+{
+  "name": "elimgweb-fullstack",
+  "version": "2.0.0",
+  "description": "Elim G Mission - Full Stack Glocal Ministry Platform",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "init": "node server/init-db.js",
+    "dev": "NODE_ENV=development node server/index.js",
+    "start": "NODE_ENV=production node server/index.js",
+    "admin": "NODE_ENV=development node server/admin.js"
+  },
+  "keywords": ["mission", "glocal", "ministry", "business"],
+  "author": "Elim G Mission",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "better-sqlite3": "^9.2.2",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.7",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.33.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "compression": "^1.7.4",
+    "uuid": "^9.0.1"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "about": "Giới thiệu",
+    "pillars": "Bốn trụ cột",
+    "sites": "Nền tảng",
+    "partners": "Đối tác",
+    "vision": "Tầm nhìn",
+    "news": "Tin tức",
+    "faq": "Câu hỏi thường gặp",
+    "involve": "Tham gia",
+    "donate": "Ủng hộ",
+    "language": "Ngôn ngữ"
+  },
+  "hero": {
+    "subtitle": "Từ nhà đến các quốc gia",
+    "title1": "Chúng tôi kết nối",
+    "title2": "Chúa làm việc",
+    "connection": "Kết nối",
+    "tagline1": "Vượt qua sự giúp đỡ đến kết nối",
+    "tagline2": "Vượt qua biên giới đến gia đình",
+    "learnMore": "Tìm hiểu tầm nhìn",
+    "getInvolved": "Tham gia",
+    "verse": "Ta sẽ làm đường trong đồng vắng và sông trong sa mạc",
+    "verseRef": "Ê-sai 43:19",
+    "visitors": "Khách truy cập"
+  },
+  "stats": {
+    "migrants": "Người di cư được kết nối",
+    "partners": "Đối tác",
+    "countries": "Quốc gia",
+    "children": "Thế hệ trẻ"
+  },
+  "about": {
+    "title": "Cuộc gặp tốt, Kết nối tốt, Đoàn kết tốt",
+    "encounter": {
+      "title": "Cuộc gặp tốt",
+      "subtitle": "Good Encounter",
+      "description": "Thông qua những cuộc gặp gỡ quý giá mà Chúa cho phép, chúng tôi xây dựng mối quan hệ ban phước cho cuộc sống của nhau."
+    },
+    "connection": {
+      "title": "Kết nối tốt",
+      "subtitle": "Good Connection",
+      "description": "Chúng tôi kết nối vượt ra ngoài sự giúp đỡ đơn giản đến các mối quan hệ bền vững. Chúng tôi làm cầu nối trong tất cả các lĩnh vực: nhà thờ, nơi làm việc, trường học và cuộc sống."
+    },
+    "unity": {
+      "title": "Đoàn kết tốt",
+      "subtitle": "Good Unity",
+      "description": "Các nền văn hóa và xuất xứ đa dạng đoàn kết để tạo ra sự hòa hợp tuyệt đẹp. WeBlend — một cộng đồng hòa hợp cùng nhau."
+    },
+    "pastor": {
+      "quote": "Chúa đã ban cho tôi tầm nhìn về 'Đức Chúa Trời di cư'. Trong số 3 triệu người di cư ở Hàn Quốc, tôi đã khám phá những khả năng mới cho sứ mệnh.",
+      "name": "Mục sư Han Jin-Jun",
+      "title": "Giám đốc Elim G Mission · Truyền giáo người di cư, Giáo hội Busan Nambu"
+    }
+  },
+  "pillars": {
+    "title": "Bốn trụ cột của Cầu nối nhân văn",
+    "subtitle": "Bốn cây cầu nối người di cư bị cô lập với thế giới",
+    "church": {
+      "title": "Tâm linh & Cộng đồng",
+      "items": ["Thờ phượng đa ngôn ngữ", "Nhóm nhỏ quốc gia", "Nhà thờ nơi làm việc"]
+    },
+    "workplace": {
+      "title": "Việc làm & Kỹ năng",
+      "items": ["Học viện kỹ năng", "Kết nối việc làm", "Chức vụ BAM"]
+    },
+    "school": {
+      "title": "Giáo dục & Thế hệ tiếp theo",
+      "items": ["Truyền giáo trẻ em", "Học viện AI", "Giáo dục song ngữ"]
+    },
+    "life": {
+      "title": "Cuộc sống & Định cư",
+      "items": ["Tư vấn visa/pháp lý", "Hỗ trợ y tế", "Trung tâm chữa lành"]
+    }
+  },
+  "vision": {
+    "title": "Chân trời mới trong sứ mệnh Glocal",
+    "subtitle": "Chức vụ người di cư bắt đầu từ địa phương (Local) mở rộng ra toàn cầu (Global). Chúng tôi trình bày một mô hình mới của sứ mệnh thế giới thông qua mô hình 'Tái ủy thác'.",
+    "care": {
+      "title": "Chức vụ chăm sóc người di cư",
+      "description": "Xây dựng hệ thống hỗ trợ hành chính/pháp lý/y tế một cửa",
+      "target": "2,000+"
+    },
+    "worship": {
+      "title": "Mở rộng thờ phượng tích hợp",
+      "description": "Thờ phượng đa ngôn ngữ và trồng nhà thờ nơi làm việc",
+      "target": "10 địa điểm"
+    },
+    "academy": {
+      "title": "Học viện AI Glocal",
+      "description": "Nền tảng giáo dục nâng cao năng lực số",
+      "target": "300 người"
+    },
+    "center": {
+      "title": "Trung tâm tích hợp Glocal",
+      "description": "Cơ sở dự án cộng sinh Gimhae·Geoje·Jeongguan",
+      "target": "3 trung tâm"
+    }
+  },
+  "news": {
+    "title": "Tin tức gần đây",
+    "subtitle": "Cập nhật trực tiếp từ hiện trường Elim G Mission",
+    "gallery": "Thư viện ảnh hiện trường",
+    "readMore": "Đọc thêm"
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "questions": [
+      {
+        "q": "Elim G Mission là gì?",
+        "a": "Elim G Mission là một tổ chức truyền giáo glocal làm việc với người di cư sống ở Hàn Quốc. Chúng tôi vượt ra ngoài sự giúp đỡ đơn giản để tạo ra các mối quan hệ và kết nối bền vững, phục vụ như một cây cầu trong tất cả các lĩnh vực."
+      },
+      {
+        "q": "Quyên góp được sử dụng như thế nào?",
+        "a": "Quyên góp được sử dụng minh bạch cho hoạt động thờ phượng và cộng đồng người di cư (40%), giáo dục tiếng Hàn và hỗ trợ tự lực (30%), hỗ trợ cuộc sống như tư vấn y tế và pháp lý (20%), và xây dựng cơ sở hạ tầng truyền giáo (10%)."
+      },
+      {
+        "q": "Làm thế nào để tôi có thể tình nguyện?",
+        "a": "Chúng tôi tuyển tình nguyện viên trong nhiều lĩnh vực bao gồm giáo dục tiếng Hàn, phiên dịch, hỗ trợ CNTT, tư vấn pháp lý và hỗ trợ y tế. Vui lòng liên hệ với chúng tôi qua kênh KakaoTalk hoặc email."
+      },
+      {
+        "q": "Bạn làm việc với người di cư từ những quốc gia nào?",
+        "a": "Chúng tôi làm việc với người di cư từ 18 quốc gia Đông Nam Á bao gồm Việt Nam, Nepal, Campuchia, Lào, Thái Lan, Myanmar, Philippines và Indonesia."
+      },
+      {
+        "q": "Các địa điểm chức vụ của bạn ở đâu?",
+        "a": "Trụ sở của chúng tôi ở Gimhae, Gyeongnam, và chúng tôi phục vụ chủ yếu ở các khu vực Gyeongnam và Busan. Bạn có thể tham gia từ bất kỳ đâu trong cả nước thông qua các nền tảng trực tuyến."
+      }
+    ]
+  },
+  "involve": {
+    "title": "Cùng trở thành cây cầu",
+    "subtitle": "Sự hỗ trợ và tham gia của bạn trở thành những cây cầu kết nối những người bị ngắt kết nối.",
+    "donationProgress": "Mục tiêu quyên góp 2026",
+    "current": "Hiện tại",
+    "goal": "Mục tiêu",
+    "accountInfo": "Tài khoản quyên góp",
+    "bank": "Ngân hàng Nonghyup",
+    "accountNumber": "301-0296-7179-91",
+    "accountHolder": "Chủ tài khoản: Elim G Mission",
+    "copy": "Sao chép",
+    "newsletter": {
+      "title": "Đăng ký nhận bản tin",
+      "subtitle": "Nhận cập nhật chức vụ hàng tháng và chủ đề cầu nguyện qua email",
+      "placeholder": "Nhập địa chỉ email",
+      "subscribe": "Đăng ký"
+    },
+    "donateRegular": "Quyên góp định kỳ",
+    "volunteer": "Quyên góp tài năng",
+    "contact": "Liên hệ KakaoTalk",
+    "donateNow": "Quyên góp ngay"
+  },
+  "payment": {
+    "title": "Quyên góp",
+    "amount": "Số tiền quyên góp",
+    "customAmount": "Nhập số tiền",
+    "name": "Tên",
+    "email": "Email",
+    "phone": "Điện thoại",
+    "message": "Tin nhắn quyên góp",
+    "recurring": "Quyên góp định kỳ",
+    "oneTime": "Quyên góp một lần",
+    "submit": "Quyên góp",
+    "cancel": "Hủy"
+  },
+  "footer": {
+    "name": "Elim G Mission",
+    "location": "Gimhae, Gyeongnam (Trụ sở) · Geoje, Busan Jeongguan, Jangan",
+    "phone": "010-2083-3106",
+    "email": "kodhjj@gmail.com",
+    "blog": "Blog Naver",
+    "glocalblog": "Blog Glocal Bridge",
+    "kakao": "KakaoTalk",
+    "copyright": "© 2026 Elim G Mission Society. Đã đăng ký bản quyền.",
+    "visitors": "Khách truy cập"
+  },
+  "notifications": {
+    "accountCopied": "Đã sao chép số tài khoản!",
+    "subscribeSuccess": "Đã hoàn tất đăng ký nhận bản tin!",
+    "subscribeFail": "Vui lòng nhập email hợp lệ",
+    "paymentSuccess": "Cảm ơn bạn đã quyên góp!",
+    "paymentFail": "Đã xảy ra lỗi trong quá trình xử lý quyên góp.",
+    "commentSuccess": "Đã đăng bình luận. Nó sẽ được hiển thị sau khi quản trị viên phê duyệt.",
+    "commentFail": "Không thể đăng bình luận.",
+    "kakaoShare": "Chia sẻ KakaoTalk sẽ được kích hoạt sau khi thiết lập khóa ứng dụng"
+  },
+  "search": {
+    "placeholder": "Nhập từ khóa tìm kiếm...",
+    "noResults": "Không có kết quả tìm kiếm.",
+    "results": "Kết quả tìm kiếm"
+  },
+  "comments": {
+    "title": "Bình luận",
+    "name": "Tên",
+    "email": "Email (tùy chọn)",
+    "content": "Nội dung bình luận",
+    "submit": "Đăng bình luận",
+    "reply": "Trả lời",
+    "pending": "Đang chờ phê duyệt"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "about": "About",
+    "pillars": "Four Pillars",
+    "sites": "Platforms",
+    "partners": "Partners",
+    "vision": "Vision",
+    "news": "News",
+    "faq": "FAQ",
+    "involve": "Get Involved",
+    "donate": "Donate",
+    "language": "Language"
+  },
+  "hero": {
+    "subtitle": "From Home to Nations",
+    "title1": "We Connect",
+    "title2": "God Works",
+    "connection": "Connection",
+    "tagline1": "Beyond Help to Connection",
+    "tagline2": "Beyond Borders to Family",
+    "learnMore": "Learn Our Vision",
+    "getInvolved": "Get Involved",
+    "verse": "I will make a way in the wilderness and rivers in the desert",
+    "verseRef": "Isaiah 43:19",
+    "visitors": "Visitors"
+  },
+  "stats": {
+    "migrants": "Connected Migrants",
+    "partners": "Partners",
+    "countries": "Countries",
+    "children": "Next Gen Children"
+  },
+  "about": {
+    "title": "Good Encounter, Good Connection, Good Unity",
+    "encounter": {
+      "title": "Good Encounter",
+      "subtitle": "Good Encounter",
+      "description": "Through precious encounters God allows, we build relationships that bless each other's lives."
+    },
+    "connection": {
+      "title": "Good Connection",
+      "subtitle": "Good Connection",
+      "description": "We connect beyond simple help to sustainable relationships. We bridge in all areas: church, workplace, school, and life."
+    },
+    "unity": {
+      "title": "Good Unity",
+      "subtitle": "Good Unity",
+      "description": "Diverse cultures and backgrounds unite to create beautiful harmony. WeBlend — a community that harmonizes together."
+    },
+    "pastor": {
+      "quote": "God has given me the vision of 'The Migrating God.' Among the 3 million migrants in Korea, I discovered new possibilities for mission.",
+      "name": "Pastor Jin-Jun Han",
+      "title": "Director, Elim G Mission · Migrant Missionary, Busan Nambu Presbytery"
+    }
+  },
+  "pillars": {
+    "title": "Four Pillars of Human Bridge",
+    "subtitle": "Four bridges connecting isolated migrants to the world",
+    "church": {
+      "title": "Spirituality & Community",
+      "items": ["Multilingual Worship", "National Small Groups", "Workplace Church"]
+    },
+    "workplace": {
+      "title": "Jobs & Skills",
+      "items": ["Skills Academy", "Job Matching", "BAM Ministry"]
+    },
+    "school": {
+      "title": "Education & Next Generation",
+      "items": ["Children's Mission", "AI Academy", "Bilingual Education"]
+    },
+    "life": {
+      "title": "Life & Settlement",
+      "items": ["Visa/Legal Counsel", "Medical Support", "Healing Center"]
+    }
+  },
+  "vision": {
+    "title": "New Horizons in Glocal Mission",
+    "subtitle": "Migrant ministry that started locally (Local) expands globally (Global). We present a new paradigm of world mission through the 'Re-Commission' model.",
+    "care": {
+      "title": "Migrant Care Ministry",
+      "description": "Building one-stop administrative/legal/medical support system",
+      "target": "2,000+"
+    },
+    "worship": {
+      "title": "Integrated Worship Expansion",
+      "description": "Multilingual worship and workplace church planting",
+      "target": "10 Sites"
+    },
+    "academy": {
+      "title": "AI Glocal Academy",
+      "description": "Digital capability enhancement education platform",
+      "target": "300 People"
+    },
+    "center": {
+      "title": "Glocal Integration Center",
+      "description": "Gimhae·Geoje·Jeongguan symbiotic project base",
+      "target": "3 Centers"
+    }
+  },
+  "news": {
+    "title": "Recent News",
+    "subtitle": "Live updates from Elim G Mission field",
+    "gallery": "Ministry Field Gallery",
+    "readMore": "Read More"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "q": "What is Elim G Mission?",
+        "a": "Elim G Mission is a glocal mission organization working with migrants living in Korea. We go beyond simple help to create sustainable relationships and connections, serving as a bridge in all areas: church, workplace, school, and life."
+      },
+      {
+        "q": "How are donations used?",
+        "a": "Donations are transparently used for migrant worship and community operations (40%), Korean language education and self-reliance support (30%), life support such as medical and legal counseling (20%), and mission infrastructure construction (10%). Quarterly financial reports are published on the website."
+      },
+      {
+        "q": "How can I volunteer?",
+        "a": "We recruit volunteers in various fields including Korean language education, interpretation, IT support, legal counseling, and medical support. Please contact us via KakaoTalk channel or email for consultation."
+      },
+      {
+        "q": "Which countries' migrants do you work with?",
+        "a": "We work with migrants from 18 Southeast Asian countries including Vietnam, Nepal, Cambodia, Laos, Thailand, Myanmar, Philippines, and Indonesia. We primarily serve foreign workers, marriage migrants, and international students."
+      },
+      {
+        "q": "Where are your ministry locations?",
+        "a": "Our headquarters is in Gimhae, Gyeongnam, and we minister mainly in Gyeongnam and Busan areas including Gijang, Jeongguan, Geoje, Changwon, and Jinju. You can participate from anywhere in the country through online platforms."
+      }
+    ]
+  },
+  "involve": {
+    "title": "Become a Bridge Together",
+    "subtitle": "Your support and participation become bridges connecting the disconnected.",
+    "donationProgress": "2026 Donation Goal",
+    "current": "Current",
+    "goal": "Goal",
+    "accountInfo": "Donation Account",
+    "bank": "Nonghyup Bank",
+    "accountNumber": "301-0296-7179-91",
+    "accountHolder": "Account Holder: Elim G Mission",
+    "copy": "Copy",
+    "newsletter": {
+      "title": "Newsletter Subscription",
+      "subtitle": "Receive monthly ministry updates and prayer topics via email",
+      "placeholder": "Enter email address",
+      "subscribe": "Subscribe"
+    },
+    "donateRegular": "Regular Donation",
+    "volunteer": "Donate Talent",
+    "contact": "KakaoTalk Inquiry",
+    "donateNow": "Donate Now"
+  },
+  "payment": {
+    "title": "Make a Donation",
+    "amount": "Donation Amount",
+    "customAmount": "Enter Amount",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Donation Message",
+    "recurring": "Regular Donation",
+    "oneTime": "One-time Donation",
+    "submit": "Donate",
+    "cancel": "Cancel"
+  },
+  "footer": {
+    "name": "Elim G Mission",
+    "location": "Gimhae, Gyeongnam (HQ) · Geoje, Busan Jeongguan, Jangan",
+    "phone": "010-2083-3106",
+    "email": "kodhjj@gmail.com",
+    "blog": "Naver Blog",
+    "glocalblog": "Glocal Bridge Blog",
+    "kakao": "KakaoTalk",
+    "copyright": "© 2026 Elim G Mission Society. All rights reserved.",
+    "visitors": "Visitors"
+  },
+  "notifications": {
+    "accountCopied": "Account number copied!",
+    "subscribeSuccess": "Newsletter subscription completed!",
+    "subscribeFail": "Please enter a valid email",
+    "paymentSuccess": "Thank you for your donation!",
+    "paymentFail": "An error occurred during donation processing.",
+    "commentSuccess": "Comment posted. It will be displayed after admin approval.",
+    "commentFail": "Failed to post comment.",
+    "kakaoShare": "KakaoTalk sharing will be activated after app key setup"
+  },
+  "search": {
+    "placeholder": "Enter search term...",
+    "noResults": "No search results.",
+    "results": "Search Results"
+  },
+  "comments": {
+    "title": "Comments",
+    "name": "Name",
+    "email": "Email (optional)",
+    "content": "Comment",
+    "submit": "Post Comment",
+    "reply": "Reply",
+    "pending": "Pending Approval"
+  }
+}
