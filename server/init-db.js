@@ -91,6 +91,16 @@ if (newsCount.count === 0) {
 // Insert sample partners
 const samplePartners = [
   {
+    name_ko: '하동 이주민선교센터',
+    name_en: 'Hadong Migration Mission Center',
+    category: '선교',
+    industry: '인구소멸 대응·이주민 선교',
+    location: '경남 하동',
+    description_ko: '인구소멸 위기 지역 하동에서 이주민 선교와 지역 재생을 실천하는 글로컬 선교 거점',
+    description_en: 'Glocal mission hub addressing population decline through migrant ministry in Hadong',
+    website_url: 'https://hadong-elimg.netlify.app'
+  },
+  {
     name_ko: '(주)에스알씨',
     name_en: 'SRC Co., Ltd.',
     category: 'BAM',
