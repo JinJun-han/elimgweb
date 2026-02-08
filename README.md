@@ -3,6 +3,24 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org/)
 
+> **🎉 완성된 웹사이트를 지금 바로 확인하세요!**  
+> 라이브 데모: [여기를 클릭](https://3000-ikfnvt0ididz4vgesiz23-5c13a017.sandbox.novita.ai)
+
+## 📚 빠른 가이드 링크
+
+처음 사용하시나요? 아래 가이드를 확인하세요:
+
+| 가이드 | 설명 | 소요 시간 |
+|--------|------|-----------|
+| [⚡ QUICK_REFERENCE.md](./QUICK_REFERENCE.md) | 가장 자주 수정하는 내용만 모음 | 2분 |
+| [📝 HOW_TO_EDIT.md](./HOW_TO_EDIT.md) | 웹사이트 수정 완벽 가이드 | 10분 |
+| [💡 EDITING_EXAMPLES.md](./EDITING_EXAMPLES.md) | 실전 수정 예시 모음 (5/10/30분) | 15분 |
+| [🚀 QUICK_START.md](./QUICK_START.md) | elimg.com 실제 배포 (3가지 방법) | 30분 |
+| [📄 DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) | 상세 배포 가이드 | 1시간 |
+| [🎬 VIDEO_TUTORIAL_SCRIPT.md](./VIDEO_TUTORIAL_SCRIPT.md) | 비디오 튜토리얼 스크립트 | - |
+| [📋 FINAL_SUMMARY.md](./FINAL_SUMMARY.md) | 전체 프로젝트 요약 | 5분 |
+| [✨ FULLSTACK_COMPLETE.md](./FULLSTACK_COMPLETE.md) | 풀스택 기능 상세 설명 | 10분 |
+
 ## 🌍 프로젝트 개요
 
 엘림G선교회 웹사이트는 **단순한 정보 제공을 넘어 실제 작동하는 풀스택 선교 플랫폼**입니다.
