@@ -100,23 +100,23 @@ const HERO_IMAGES=[
 ];
 
 const GALLERY_IMAGES=[
-  {src:'/images/gallery/stone-church.jpg',title:'오산교회',category:'예배'},
-  {src:'/images/gallery/church-group.jpg',title:'교회 단체',category:'예배'},
-  {src:'/images/gallery/christmas-family.jpg',title:'크리스마스 예배',category:'예배'},
-  {src:'/images/gallery/indoor-group.jpg',title:'실내 모임',category:'사역'},
+  {src:'/images/gallery/stone-church.jpg',title:'무척산 기도원',category:'예배'},
+  {src:'/images/gallery/church-group.jpg',title:'밀양오산교회(글로컬선교 설교 후)',category:'예배'},
+  {src:'/images/gallery/christmas-family.jpg',title:'베트남선교교회(신년 첫 주일설교)',category:'예배'},
+  {src:'/images/gallery/indoor-group.jpg',title:'기장이주민센터 여름캠프 지원',category:'사역'},
   {src:'/images/gallery/vietnam-mission.jpg',title:'베트남 선교',category:'해외'},
-  {src:'/images/gallery/korea-seminar.jpg',title:'한국 세미나',category:'교육'},
+  {src:'/images/gallery/korea-seminar.jpg',title:'반석인더스트리즈 25년 시무예배',category:'교육'},
   {src:'/images/gallery/thailand-group.jpg',title:'태국 카렌족 모임',category:'해외'},
-  {src:'/images/gallery/thailand-church.jpg',title:'태국 교회',category:'해외'},
-  {src:'/images/gallery/lake-mountain.jpg',title:'호수와 산',category:'자연'},
-  {src:'/images/gallery/building-garden.jpg',title:'건물과 정원',category:'시설'},
+  {src:'/images/gallery/thailand-church.jpg',title:'태국카렌족 집회장소',category:'해외'},
+  {src:'/images/gallery/lake-mountain.jpg',title:'무척산 기도원 천지',category:'자연'},
+  {src:'/images/gallery/building-garden.jpg',title:'부산대학 인문학관(십자가 아래로)',category:'시설'},
   {src:'/images/gallery/snowy-mountain.jpg',title:'설악산 겨울',category:'자연'},
   {src:'/images/gallery/mountain-hiker.jpg',title:'산 등반',category:'자연'},
-  {src:'/images/gallery/rainbow-landscape.jpg',title:'무지개 풍경',category:'자연'},
-  {src:'/images/gallery/city-view.jpg',title:'도시 전망',category:'지역'},
-  {src:'/images/gallery/garden-pond.jpg',title:'정원 연못',category:'시설'},
-  {src:'/images/gallery/wooden-stairs.jpg',title:'나무 계단',category:'자연'},
-  {src:'/images/gallery/bamboo-path.jpg',title:'대나무 길',category:'자연'},
+  {src:'/images/gallery/rainbow-landscape.jpg',title:'하나님의 신실하신 언약의 사역',category:'자연'},
+  {src:'/images/gallery/city-view.jpg',title:'희망을 솟다',category:'지역'},
+  {src:'/images/gallery/garden-pond.jpg',title:'쉼과 회복',category:'시설'},
+  {src:'/images/gallery/wooden-stairs.jpg',title:'이 계단 끝에는',category:'자연'},
+  {src:'/images/gallery/bamboo-path.jpg',title:'저 끝에는',category:'자연'},
   {src:'/images/gallery/golden-cliff.jpg',title:'황금 절벽',category:'자연'},
   {src:'/images/gallery/industrial-view.jpg',title:'산업 지역',category:'지역'},
   {src:'/images/gallery/golden-sunset.jpg',title:'황금 석양',category:'자연'},
@@ -482,9 +482,9 @@ return (
     </div>
     
     {/* 성경구절 - 히어로 슬라이드와 동기화 */}
-    <div style={{marginTop:48,fontSize:14,color:'rgba(255,255,255,.8)',fontFamily:CF,fontStyle:'italic',lineHeight:1.8,opacity:heroOk?1:0,transition:'all 1s ease-in-out',textShadow:'0 2px 8px rgba(0,0,0,.4)',maxWidth:600,margin:'48px auto 0'}}>
-      "{SCRIPTURE_VERSES[heroIndex]?.text}"<br/>
-      <span style={{fontSize:11,letterSpacing:1.5,color:'rgba(212,165,116,.65)',fontWeight:500}}>— {SCRIPTURE_VERSES[heroIndex]?.reference}</span>
+    <div style={{fontSize:15,color:'rgba(255,255,255,.9)',fontFamily:CF,fontStyle:'italic',lineHeight:1.9,opacity:heroOk?1:0,transition:'all 1s ease-in-out',textShadow:'0 2px 12px rgba(0,0,0,.5)',maxWidth:680,margin:'48px auto 0',padding:'0 24px'}}>
+      <span style={{fontSize:18,fontWeight:500}}>"{SCRIPTURE_VERSES[heroIndex]?.text}"</span><br/>
+      <span style={{fontSize:13,letterSpacing:1.5,color:'rgba(212,165,116,.75)',fontWeight:600,marginTop:8,display:'inline-block'}}>— {SCRIPTURE_VERSES[heroIndex]?.reference}</span>
     </div>
   </div>
   
