@@ -85,12 +85,18 @@ const {useState,useEffect,useRef,useCallback}=React;
 
 const TG={"elimgs":"linear-gradient(135deg,#1B4965,#2D6A4F,#C77B3F)","elimgb":"linear-gradient(135deg,#6B4C3B,#D4A574)","elimg-healing":"linear-gradient(135deg,#7B2D26,#E07A5F,#F0D5A8)","elimggmmc":"linear-gradient(135deg,#2D6A4F,#74C69D)","glocal-bridge-mission":"linear-gradient(135deg,#264E73,#62B6CB)","glocalbible":"linear-gradient(135deg,#1B4965,#C77B3F)","elimgimpact-genesis01":"linear-gradient(135deg,#0A1628,#3D6B5E,#F0D5A8)","elimgimpact-exodus":"linear-gradient(135deg,#7B2D26,#C77B3F,#F0D5A8)","elimgaa":"linear-gradient(135deg,#122240,#62B6CB)","elimgf":"linear-gradient(135deg,#2C2C2C,#6B4C3B)","elimg-aikorean":"linear-gradient(135deg,#2D6A4F,#74C69D,#F0D5A8)","glocalbridge-vn":"linear-gradient(135deg,#DA251D,#FFCD00)","glocalbridge-np":"linear-gradient(135deg,#DC143C,#003893)","elimg-chambit":"linear-gradient(135deg,#1B4965,#2D6A4F)","elimgonestop":"linear-gradient(135deg,#264E73,#C77B3F)","kimhae-for-ceo":"linear-gradient(135deg,#C77B3F,#1B4965)","kimhae-university":"linear-gradient(135deg,#2D6A4F,#1B4965)","kimhae-for-migrants":"linear-gradient(135deg,#7B2D26,#C77B3F,#F0D5A8)","glocalbridge-web":"linear-gradient(135deg,#C77B3F,#D4A574,#F0D5A8)"};
 
-// 실제 사역 현장 사진
+// 실제 사역 현장 사진 - 10장으로 확장
 const HERO_IMAGES=[
   '/images/hero/bridge-night.jpg',
   '/images/hero/mountain-rock.jpg',
   '/images/hero/sunset-city.jpg',
-  '/images/hero/sunset-mountain.jpg'
+  '/images/hero/sunset-mountain.jpg',
+  '/images/gallery/lake-mountain.jpg',
+  '/images/gallery/golden-cliff.jpg',
+  '/images/gallery/rainbow-landscape.jpg',
+  '/images/gallery/snowy-mountain.jpg',
+  '/images/gallery/wooden-stairs.jpg',
+  '/images/gallery/golden-sunset.jpg'
 ];
 
 const GALLERY_IMAGES=[
@@ -119,12 +125,18 @@ const GALLERY_IMAGES=[
   {src:'/images/gallery/fountain-flowers.jpg',title:'분수와 꽃',category:'시설'}
 ];
 
+// 성경구절 10개 - 히어로 슬라이드와 동기화
 const SCRIPTURE_VERSES=[
   {text:"내가 나그네 되었을 때에 영접하였고",reference:"마태복음 25:35"},
   {text:"땅 끝까지 이르러 내 증인이 되리라",reference:"사도행전 1:8"},
   {text:"너희는 가서 모든 민족을 제자로 삼아",reference:"마태복음 28:19"},
   {text:"하나님이 세상을 이처럼 사랑하사",reference:"요한복음 3:16"},
-  {text:"광야에서 엘림으로, 엘림에서 가나안으로",reference:"출애굽기 15:27"}
+  {text:"광야에서 엘림으로, 엘림에서 가나안으로",reference:"출애굽기 15:27"},
+  {text:"내 형제 중에 지극히 작은 자 하나에게 한 것이 곧 내게 한 것이니라",reference:"마태복음 25:40"},
+  {text:"누구든지 주의 이름을 부르는 자는 구원을 받으리라",reference:"로마서 10:13"},
+  {text:"우리가 서로 사랑하면 하나님이 우리 안에 거하시고",reference:"요한일서 4:12"},
+  {text:"인자가 온 것은 섬김을 받으려 함이 아니라 도리어 섬기려 하고",reference:"마태복음 20:28"},
+  {text:"이 복음이 온 천하에 전파되리라",reference:"마태복음 26:13"}
 ];
 
 const OVERSEAS_MISSIONS=[
@@ -303,8 +315,8 @@ const openImageModal=(img)=>{
   setShowModal(true);
 };
 
-const NAV=["소개","4대 사역","플랫폼","파트너","비전","소식","FAQ","동참"];
-const NID=["about","pillars","sites","partners","vision","news","faq","involve"];
+const NAV=["소개","4대 사역","플랫폼","파트너","해외 선교지","비전","소식","FAQ","동참"];
+const NID=["about","pillars","sites","partners","overseas","vision","news","faq","involve"];
 
 const CF="'Cormorant Garamond',serif";
 
@@ -343,7 +355,13 @@ const SC=[
 {t:"K-브릿지 원스톱",d:"비자 · 행정 신청 바로가기",u:"https://elimgonestop.netlify.app",ti:"📋",k:"elimgonestop"}
 ]},
 {id:"glocal",lb:"GLOCAL BRIDGE",tl:"글로컬 전략",cl:"#C77B3F",ic:"🌍",ss:[
-{t:"CEO 상생 플랫폼",d:"김해 CEO 200명 네트워크 · 인력난 해결",u:"https://jinjun-han.github.io/glocalbridge-kimhae-for-ceo/",ti:"💼",k:"kimhae-for-ceo"},
+{t:"글로컬 네팔",d:"네팔 이주민 통합 지원 센터",u:"https://glocalbridge-np.netlify.app",ti:"🇳🇵",b:"NEW",k:"glocalbridge-np"},
+{t:"글로컬 스리랑카",d:"스리랑카 이주민 커뮤니티",u:"#",ti:"🇱🇰",b:"준비중",k:"glocalbridge-lk"},
+{t:"글로컬 기장",d:"기장군 3자 연합 선교 생태계",u:"https://elimggmmc.netlify.app",ti:"🏛️",k:"elimggmmc"},
+{t:"글로컬 정관",d:"정관 이주민 통합 지원 거점",u:"#",ti:"🏘️",b:"준비중",k:"glocalbridge-jeonggwan"},
+{t:"글로컬 하동",d:"하동 인구소멸 대응 이주민 선교",u:"https://hadong-elimg.netlify.app",ti:"🌾",k:"glocalbridge-hadong"},
+{t:"글로컬 김해",d:"김해 CEO 네트워크 · 상생 플랫폼",u:"https://jinjun-han.github.io/glocalbridge-kimhae-for-ceo/",ti:"💼",k:"kimhae-for-ceo"},
+{t:"글로컬 장유",d:"장유 지역 힐링교회 중심 사역",u:"https://elimg-healing.netlify.app",ti:"💒",k:"elimg-healing"},
 {t:"대학 글로컬 전략",d:"지방대 소멸 위기 → 글로벌 기회 전환",u:"https://jinjun-han.github.io/glocalbridge-kimhae-university/",ti:"🎓",k:"kimhae-university"},
 {t:"이주민 인생 로드맵",d:"10년 마스터플랜 · 교육 · 정착 · 창업",u:"https://jinjun-han.github.io/glocalbridge-kimhae-for-migrants/",ti:"🗺️",k:"kimhae-for-migrants"},
 {t:"글로컬브릿지 웹",d:"소상공인 웹사이트 구독 서비스 (10% 나눔)",u:"#",ti:"🌐",b:"NEW",k:"glocalbridge-web"}
@@ -359,6 +377,7 @@ bm:[{n:"(주)에스알씨",f:"건설·G.R공법",l:"김해",u:"https://elimg-src
 const VP=[{t:"이주민 케어 사역",d:"원스톱 행정/법률/의료 지원 시스템 구축",i:"❤️",n:"2,000+",img:IMAGES.family},{t:"통합 예배 확장",d:"다국어 예배 및 일터 교회 플랜팅",i:"⛪",n:"10개",img:IMAGES.church},{t:"AI 글로컬 아카데미",d:"디지털 역량 강화 교육 플랫폼",i:"🤖",n:"300명",img:IMAGES.study},{t:"글로컬 통합센터",d:"김해·거제·정관 상생 프로젝트 거점",i:"🏗️",n:"3개소",img:IMAGES.globe}];
 
 const NEWS=[
+  {date:"2026.02.09",title:"한화오션 참빛힐링센터 네팔반 개설",desc:"매주 일요일 저녁 6~8시 네팔어 한국어 교육 시작",img:IMAGES.study,tag:"신규"},
   {date:"2026.02.08",title:"거제 참빛힐링센터 개소식",desc:"한화오션 외국인 근로자 1,800명 종합 지원",img:IMAGES.mission,tag:"현장"},
   {date:"2026.02.05",title:"베트남어 한국어 교육 플랫폼 오픈",desc:"700개 단어, 20단계 체계화 학습 과정",img:IMAGES.study,tag:"교육"},
   {date:"2026.02.01",title:"김해 CEO 네트워크 2월 정기모임",desc:"이주민 채용 및 상생 방안 논의",img:IMAGES.work,tag:"협력"},
@@ -462,7 +481,11 @@ return (
       <div className="share-btn" onClick={()=>share('link')} style={{background:'rgba(255,255,255,.1)',color:'#fff'}} title="링크 복사">🔗</div>
     </div>
     
-    <div style={{marginTop:48,fontSize:12,color:'rgba(255,255,255,.22)',fontFamily:CF,fontStyle:'italic',lineHeight:1.6,opacity:heroOk?1:0,transition:'opacity 1.2s ease 1.1s'}}>"내가 광야에서 길을 만들며 사막에서 강을 만들리라"<br/><span style={{fontSize:10,letterSpacing:1}}>이사야 43:19</span></div>
+    {/* 성경구절 - 히어로 슬라이드와 동기화 */}
+    <div style={{marginTop:48,fontSize:14,color:'rgba(255,255,255,.8)',fontFamily:CF,fontStyle:'italic',lineHeight:1.8,opacity:heroOk?1:0,transition:'all 1s ease-in-out',textShadow:'0 2px 8px rgba(0,0,0,.4)',maxWidth:600,margin:'48px auto 0'}}>
+      "{SCRIPTURE_VERSES[heroIndex]?.text}"<br/>
+      <span style={{fontSize:11,letterSpacing:1.5,color:'rgba(212,165,116,.65)',fontWeight:500}}>— {SCRIPTURE_VERSES[heroIndex]?.reference}</span>
+    </div>
   </div>
   
   <div style={{position:'absolute',bottom:36,left:'50%',transform:'translateX(-50%)',animation:'pulse 2.5s ease-in-out infinite',zIndex:10}}>
@@ -641,6 +664,61 @@ return (
   </div>
 </section>
 
+{/* OVERSEAS MISSIONS */}
+<section ref={r("overseas")} style={{padding:'92px 24px',background:'linear-gradient(135deg,#FAF9F6,#F5F0EA,#FAF9F6)',position:'relative',overflow:'hidden'}}>
+  <div style={{position:'absolute',top:0,right:0,width:500,height:500,background:'radial-gradient(circle,rgba(199,123,63,.03),transparent)',pointerEvents:'none'}}/>
+  <div style={{position:'absolute',bottom:0,left:0,width:400,height:400,background:'radial-gradient(circle,rgba(29,105,79,.02),transparent)',pointerEvents:'none'}}/>
+  
+  <div style={{maxWidth:1100,margin:'0 auto',position:'relative'}}>
+    <div className="fade-in" ref={addObserverRef} style={{textAlign:'center',marginBottom:64}}>
+      <div style={{fontSize:11,letterSpacing:4,fontWeight:600,marginBottom:16,fontFamily:CF,color:'#2D6A4F'}}>OVERSEAS MISSIONS</div>
+      <h2 style={{fontFamily:CF,fontSize:'clamp(30px,4.5vw,46px)',fontWeight:600,color:'#2C2C2C',lineHeight:1.25,marginBottom:16}}>해외 선교지</h2>
+      <p style={{fontSize:16,color:'#999',fontWeight:300,maxWidth:640,margin:'0 auto 20px'}}>
+        베트남 소수민족과 태국 카렌족 목회자를 세우는<br/>체계적인 신학교육 사역
+      </p>
+      <div className="gline"/>
+    </div>
+    
+    <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(460px,1fr))',gap:32}}>
+      {OVERSEAS_MISSIONS.map((m,i)=><div key={i} className="card fade-in" ref={addObserverRef} style={{borderRadius:28,background:'#fff',border:'1px solid #EDE6DA',overflow:'hidden',boxShadow:'0 4px 24px rgba(0,0,0,.04)'}}>
+        <div style={{height:260,backgroundImage:`url(${m.image})`,backgroundSize:'cover',backgroundPosition:'center',position:'relative'}}>
+          <div style={{position:'absolute',inset:0,background:'linear-gradient(180deg,transparent 40%,rgba(0,0,0,.7))'}}/>
+          <div style={{position:'absolute',top:20,left:20,fontSize:48}}>{m.flag}</div>
+          <div style={{position:'absolute',bottom:20,left:24,right:24}}>
+            <div style={{fontSize:11,letterSpacing:2,color:'rgba(255,255,255,.65)',fontWeight:600,marginBottom:6,fontFamily:CF}}>{m.country.toUpperCase()}</div>
+            <h3 style={{fontSize:'clamp(20px,2.5vw,24px)',fontWeight:700,color:'#fff',marginBottom:6}}>{m.title}</h3>
+            <p style={{fontSize:13,color:'rgba(255,255,255,.75)',fontWeight:400}}>{m.description}</p>
+          </div>
+        </div>
+        
+        <div style={{padding:'28px 32px'}}>
+          <div style={{fontSize:12,fontWeight:700,color:'#2D6A4F',marginBottom:16,letterSpacing:1}}>핵심 프로그램</div>
+          <div style={{display:'grid',gap:12}}>
+            {m.programs.map((p,j)=><div key={j} style={{display:'flex',alignItems:'flex-start',gap:12}}>
+              <div style={{width:6,height:6,borderRadius:'50%',background:'linear-gradient(135deg,#C77B3F,#D4A574)',marginTop:6,flexShrink:0}}/>
+              <div style={{fontSize:14,color:'#444',lineHeight:1.6,fontWeight:400}}>{p}</div>
+            </div>)}
+          </div>
+        </div>
+        
+        <div style={{padding:'0 32px 28px'}}>
+          <button className="btn" onClick={()=>scrollTo("involve")} style={{width:'100%',padding:'14px',borderRadius:16,background:'linear-gradient(135deg,#2D6A4F,#3A8568)',color:'#fff',fontWeight:600,fontSize:14,border:'none'}}>
+            이 사역 후원하기 →
+          </button>
+        </div>
+      </div>)}
+    </div>
+    
+    <div className="fade-in" ref={addObserverRef} style={{marginTop:48,textAlign:'center',padding:'32px 24px',borderRadius:24,background:'linear-gradient(135deg,rgba(199,123,63,.04),rgba(45,106,79,.04))',border:'1px solid rgba(199,123,63,.1)'}}>
+      <div style={{fontSize:14,color:'#666',lineHeight:1.8,marginBottom:16}}>
+        <strong style={{color:'#2D6A4F',fontWeight:600}}>엘림G선교회</strong>는 소수민족 목회자들이 탄탄한 신학적 기초 위에서<br/>
+        자신의 문화권 안에서 복음을 전하고 교회를 세울 수 있도록 돕습니다.
+      </div>
+      <div style={{fontSize:12,color:'#999',fontStyle:'italic'}}>"모든 민족을 제자로 삼아" — 마태복음 28:19</div>
+    </div>
+  </div>
+</section>
+
 {/* VISION */}
 <section ref={r("vision")} style={{padding:'92px 24px',background:'linear-gradient(160deg,#0A1628,#1B3A5C,#264E73)',position:'relative',overflow:'hidden'}}>
   <div style={{position:'absolute',inset:0,backgroundImage:`url(${IMAGES.globe})`,backgroundSize:'cover',backgroundPosition:'center',opacity:0.08}}/>
@@ -691,11 +769,18 @@ return (
       </div>)}
     </div>
     
-    {/* 이미지 갤러리 */}
+    {/* 이미지 갤러리 - 23장 실제 사진 */}
     <div className="fade-in" ref={addObserverRef}>
-      <h3 style={{fontSize:20,fontWeight:700,color:'#2C2C2C',marginBottom:20,textAlign:'center'}}>사역 현장 갤러리</h3>
+      <h3 style={{fontSize:22,fontWeight:700,color:'#2C2C2C',marginBottom:12,textAlign:'center'}}>사역 현장 갤러리</h3>
+      <p style={{fontSize:14,color:'#999',textAlign:'center',marginBottom:32}}>총 {GALLERY_IMAGES.length}장의 실제 사역 현장 사진</p>
       <div className="img-gallery">
-        {GALLERY.map((img,i)=><img key={i} src={img} alt={`Gallery ${i+1}`} onClick={()=>openImageModal(img)}/>)}
+        {GALLERY_IMAGES.map((item,i)=><div key={i} style={{position:'relative'}}>
+          <img src={item.src} alt={item.title} onClick={()=>openImageModal(item.src)} style={{cursor:'pointer'}}/>
+          <div style={{position:'absolute',bottom:12,left:12,right:12,padding:'8px 12px',background:'rgba(0,0,0,.75)',backdropFilter:'blur(8px)',borderRadius:10,display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+            <span style={{fontSize:13,fontWeight:600,color:'#fff'}}>{item.title}</span>
+            <span style={{fontSize:10,padding:'3px 8px',borderRadius:6,background:'rgba(199,123,63,.9)',color:'#fff',fontWeight:600}}>{item.category}</span>
+          </div>
+        </div>)}
       </div>
     </div>
   </div>
