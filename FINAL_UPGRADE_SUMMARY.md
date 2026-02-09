@@ -516,6 +516,6 @@ Made with ❤️ for Elim G Mission & Hadong Center
 ---
 
 **문서 작성일**: 2026년 2월 9일  
-**작성자**: AI Assistant (Claude Code)  
+**작성자**: 엘림G선교회  
 **버전**: 1.0  
 **최종 업데이트**: 2026-02-09 03:05 KST
