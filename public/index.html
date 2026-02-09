@@ -85,20 +85,81 @@ const {useState,useEffect,useRef,useCallback}=React;
 
 const TG={"elimgs":"linear-gradient(135deg,#1B4965,#2D6A4F,#C77B3F)","elimgb":"linear-gradient(135deg,#6B4C3B,#D4A574)","elimg-healing":"linear-gradient(135deg,#7B2D26,#E07A5F,#F0D5A8)","elimggmmc":"linear-gradient(135deg,#2D6A4F,#74C69D)","glocal-bridge-mission":"linear-gradient(135deg,#264E73,#62B6CB)","glocalbible":"linear-gradient(135deg,#1B4965,#C77B3F)","elimgimpact-genesis01":"linear-gradient(135deg,#0A1628,#3D6B5E,#F0D5A8)","elimgimpact-exodus":"linear-gradient(135deg,#7B2D26,#C77B3F,#F0D5A8)","elimgaa":"linear-gradient(135deg,#122240,#62B6CB)","elimgf":"linear-gradient(135deg,#2C2C2C,#6B4C3B)","elimg-aikorean":"linear-gradient(135deg,#2D6A4F,#74C69D,#F0D5A8)","glocalbridge-vn":"linear-gradient(135deg,#DA251D,#FFCD00)","glocalbridge-np":"linear-gradient(135deg,#DC143C,#003893)","elimg-chambit":"linear-gradient(135deg,#1B4965,#2D6A4F)","elimgonestop":"linear-gradient(135deg,#264E73,#C77B3F)","kimhae-for-ceo":"linear-gradient(135deg,#C77B3F,#1B4965)","kimhae-university":"linear-gradient(135deg,#2D6A4F,#1B4965)","kimhae-for-migrants":"linear-gradient(135deg,#7B2D26,#C77B3F,#F0D5A8)","glocalbridge-web":"linear-gradient(135deg,#C77B3F,#D4A574,#F0D5A8)"};
 
-// Unsplash 이미지 (실제 이미지)
+// 실제 사역 현장 사진
+const HERO_IMAGES=[
+  '/images/hero/bridge-night.jpg',
+  '/images/hero/mountain-rock.jpg',
+  '/images/hero/sunset-city.jpg',
+  '/images/hero/sunset-mountain.jpg'
+];
+
+const GALLERY_IMAGES=[
+  {src:'/images/gallery/stone-church.jpg',title:'오산교회',category:'예배'},
+  {src:'/images/gallery/church-group.jpg',title:'교회 단체',category:'예배'},
+  {src:'/images/gallery/christmas-family.jpg',title:'크리스마스 예배',category:'예배'},
+  {src:'/images/gallery/indoor-group.jpg',title:'실내 모임',category:'사역'},
+  {src:'/images/gallery/vietnam-mission.jpg',title:'베트남 선교',category:'해외'},
+  {src:'/images/gallery/korea-seminar.jpg',title:'한국 세미나',category:'교육'},
+  {src:'/images/gallery/thailand-group.jpg',title:'태국 카렌족 모임',category:'해외'},
+  {src:'/images/gallery/thailand-church.jpg',title:'태국 교회',category:'해외'},
+  {src:'/images/gallery/lake-mountain.jpg',title:'호수와 산',category:'자연'},
+  {src:'/images/gallery/building-garden.jpg',title:'건물과 정원',category:'시설'},
+  {src:'/images/gallery/snowy-mountain.jpg',title:'설악산 겨울',category:'자연'},
+  {src:'/images/gallery/mountain-hiker.jpg',title:'산 등반',category:'자연'},
+  {src:'/images/gallery/rainbow-landscape.jpg',title:'무지개 풍경',category:'자연'},
+  {src:'/images/gallery/city-view.jpg',title:'도시 전망',category:'지역'},
+  {src:'/images/gallery/garden-pond.jpg',title:'정원 연못',category:'시설'},
+  {src:'/images/gallery/wooden-stairs.jpg',title:'나무 계단',category:'자연'},
+  {src:'/images/gallery/bamboo-path.jpg',title:'대나무 길',category:'자연'},
+  {src:'/images/gallery/golden-cliff.jpg',title:'황금 절벽',category:'자연'},
+  {src:'/images/gallery/industrial-view.jpg',title:'산업 지역',category:'지역'},
+  {src:'/images/gallery/golden-sunset.jpg',title:'황금 석양',category:'자연'},
+  {src:'/images/gallery/garden-bench.jpg',title:'정원 벤치',category:'시설'},
+  {src:'/images/gallery/lotus-pond.jpg',title:'연꽃 연못',category:'자연'},
+  {src:'/images/gallery/fountain-flowers.jpg',title:'분수와 꽃',category:'시설'}
+];
+
+const SCRIPTURE_VERSES=[
+  {text:"내가 나그네 되었을 때에 영접하였고",reference:"마태복음 25:35"},
+  {text:"땅 끝까지 이르러 내 증인이 되리라",reference:"사도행전 1:8"},
+  {text:"너희는 가서 모든 민족을 제자로 삼아",reference:"마태복음 28:19"},
+  {text:"하나님이 세상을 이처럼 사랑하사",reference:"요한복음 3:16"},
+  {text:"광야에서 엘림으로, 엘림에서 가나안으로",reference:"출애굽기 15:27"}
+];
+
+const OVERSEAS_MISSIONS=[
+  {
+    flag:'🇻🇳',
+    country:'베트남',
+    title:'MBA (메콩 바이블 아카데미)',
+    description:'소수민족 목회자 신학교육 사역',
+    image:'/images/gallery/vietnam-mission.jpg',
+    programs:['소수민족 리더 양성','체계적인 신학교육','현지 교회 개척 지원','메콩 델타 지역 중심']
+  },
+  {
+    flag:'🇹🇭',
+    country:'태국',
+    title:'카렌족 목회자 신학교육',
+    description:'카렌족 교회 지도자 양성 사역',
+    image:'/images/gallery/thailand-church.jpg',
+    programs:['카렌족 목회자 교육','성경 기반 리더십 훈련','산악 지역 교회 지원','문화 적합형 신학교육']
+  }
+];
+
+// Legacy Unsplash 이미지 (하위 호환성)
 const IMAGES={
-  hero:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&q=80',
+  hero:HERO_IMAGES[0],
   community:'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=80',
   hands:'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&q=80',
-  church:'https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=800&q=80',
+  church:'/images/gallery/church-group.jpg',
   kids:'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80',
   work:'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80',
   study:'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80',
-  family:'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80',
+  family:'/images/gallery/christmas-family.jpg',
   pray:'https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&q=80',
   globe:'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=80',
   bible:'https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=800&q=80',
-  mission:'https://images.unsplash.com/photo-1484069560501-87d72b0c3669?w=800&q=80'
+  mission:'/images/gallery/vietnam-mission.jpg'
 };
 
 const App=()=>{
@@ -109,41 +170,46 @@ const [expCat,setExpCat]=useState(null);
 const [heroOk,setHeroOk]=useState(false);
 const [wordIdx,setWordIdx]=useState(0);
 const [prevIdx,setPrevIdx]=useState(-1);
-const [visitorCount,setVisitorCount]=useState(3247);
+const [heroIndex,setHeroIndex]=useState(0);
+const [visitorCount,setVisitorCount]=useState(0);
 const [showModal,setShowModal]=useState(false);
 const [modalImg,setModalImg]=useState('');
 const [showNotification,setShowNotification]=useState(false);
 const [notificationMsg,setNotificationMsg]=useState('');
 const [email,setEmail]=useState('');
 const [donationGoal]=useState(50000000); // 5천만원
-const [donationCurrent,setDonationCurrent]=useState(32400000); // 3천2백40만원
+const [donationCurrent,setDonationCurrent]=useState(0);
 const [faqOpen,setFaqOpen]=useState(null);
 const secs=useRef({});
 const observerRefs=useRef([]);
 
-// 방문자 카운터 (localStorage 활용)
+// 히어로 이미지 슬라이드쇼 (5초마다 자동 전환)
+useEffect(()=>{
+  const heroInterval=setInterval(()=>{
+    setHeroIndex(prev=>(prev+1)%HERO_IMAGES.length);
+  },5000);
+  return()=>clearInterval(heroInterval);
+},[]);
+
+// 방문자 카운터 및 초기 데이터 로드
 useEffect(()=>{
   const storedCount=localStorage.getItem('elimgVisitorCount');
-  if(storedCount){
-    setVisitorCount(parseInt(storedCount));
-  }else{
-    localStorage.setItem('elimgVisitorCount',visitorCount.toString());
-  }
-  // 방문할 때마다 +1
-  const newCount=visitorCount+1;
-  setVisitorCount(newCount);
-  localStorage.setItem('elimgVisitorCount',newCount.toString());
+  const count=storedCount?parseInt(storedCount):0;
+  setVisitorCount(count+1);
+  localStorage.setItem('elimgVisitorCount',(count+1).toString());
   
-  // 후원 금액 실시간 업데이트 시뮬레이션
-  const donationInterval=setInterval(()=>{
-    setDonationCurrent(prev=>{
-      const increase=Math.floor(Math.random()*50000)+10000;
-      const newAmount=Math.min(prev+increase,donationGoal);
-      return newAmount;
-    });
-  },15000);
+  // 방문자 수 API 업데이트
+  fetch('/api/visitors',{method:'POST'}).catch(()=>{});
   
-  return()=>clearInterval(donationInterval);
+  // 후원 진행률 API에서 가져오기
+  fetch('/api/donation/progress')
+    .then(res=>res.json())
+    .then(data=>{
+      if(data.success){
+        setDonationCurrent(data.current);
+      }
+    })
+    .catch(()=>{});
 },[]);
 
 // IntersectionObserver로 스크롤 애니메이션
@@ -347,7 +413,7 @@ return (
 
 {/* HERO */}
 <section ref={r("hero")} style={{minHeight:'100vh',display:'flex',alignItems:'center',justifyContent:'center',textAlign:'center',position:'relative',overflow:'hidden',padding:'130px 24px 100px'}}>
-  <div style={{position:'absolute',inset:0,backgroundImage:`url(${IMAGES.hero})`,backgroundSize:'cover',backgroundPosition:'center 65%'}}/>
+  {HERO_IMAGES.map((img,idx)=><div key={idx} style={{position:'absolute',inset:0,backgroundImage:`url(${img})`,backgroundSize:'cover',backgroundPosition:'center',opacity:heroIndex===idx?1:0,transition:'opacity 1.5s ease-in-out'}}/>)}
   <div style={{position:'absolute',inset:0,background:'linear-gradient(180deg,rgba(10,22,40,.75) 0%,rgba(10,22,40,.5) 35%,rgba(10,22,40,.3) 55%,rgba(10,22,40,.55) 80%,rgba(10,22,40,.85) 100%)'}}/>
   <div style={{position:'absolute',inset:0,backgroundImage:'radial-gradient(ellipse at 50% 85%,rgba(199,123,63,.1) 0%,transparent 50%)'}}/>
   <div style={{position:'absolute',width:500,height:500,border:'1px solid rgba(212,165,116,.04)',borderRadius:'50%',top:'50%',left:'50%',animation:'orbit1 60s linear infinite'}}>
