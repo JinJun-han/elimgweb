@@ -183,6 +183,7 @@ const [heroOk,setHeroOk]=useState(false);
 const [wordIdx,setWordIdx]=useState(0);
 const [prevIdx,setPrevIdx]=useState(-1);
 const [heroIndex,setHeroIndex]=useState(0);
+const [newsSlideIndex,setNewsSlideIndex]=useState(0);
 const [visitorCount,setVisitorCount]=useState(0);
 const [showModal,setShowModal]=useState(false);
 const [modalImg,setModalImg]=useState('');
@@ -201,6 +202,14 @@ useEffect(()=>{
     setHeroIndex(prev=>(prev+1)%HERO_IMAGES.length);
   },5000);
   return()=>clearInterval(heroInterval);
+},[]);
+
+// 네팔반 뉴스 슬라이드쇼 (3초마다 자동 전환)
+useEffect(()=>{
+  const newsSlideInterval=setInterval(()=>{
+    setNewsSlideIndex(prev=>(prev+1)%(NEWS[0].images?.length||1));
+  },3000);
+  return()=>clearInterval(newsSlideInterval);
 },[]);
 
 // 방문자 카운터 및 초기 데이터 로드
@@ -377,7 +386,24 @@ bm:[{n:"(주)에스알씨",f:"건설·G.R공법",l:"김해",u:"https://elimg-src
 const VP=[{t:"이주민 케어 사역",d:"원스톱 행정/법률/의료 지원 시스템 구축",i:"❤️",n:"2,000+",img:IMAGES.family},{t:"통합 예배 확장",d:"다국어 예배 및 일터 교회 플랜팅",i:"⛪",n:"10개",img:IMAGES.church},{t:"AI 글로컬 아카데미",d:"디지털 역량 강화 교육 플랫폼",i:"🤖",n:"300명",img:IMAGES.study},{t:"글로컬 통합센터",d:"김해·거제·정관 상생 프로젝트 거점",i:"🏗️",n:"3개소",img:IMAGES.globe}];
 
 const NEWS=[
-  {date:"2026.02.09",title:"한화오션 참빛힐링센터 네팔반 개설",desc:"매주 일요일 저녁 6~8시 네팔어 한국어 교육 시작",img:IMAGES.study,tag:"신규"},
+  {
+    date:"2026.02.09",
+    title:"한화오션 참빛힐링센터 네팔반 개설",
+    desc:"매주 일요일 저녁 6~8시 네팔어 한국어 교육 시작",
+    tag:"신규",
+    images:[
+      '/images/news/nepal-class-01.jpg',
+      '/images/news/nepal-class-02.jpg',
+      '/images/news/nepal-class-03.jpg',
+      '/images/news/nepal-class-04.jpg',
+      '/images/news/nepal-class-05.jpg',
+      '/images/news/nepal-class-06.jpg',
+      '/images/news/nepal-class-07.jpg',
+      '/images/news/nepal-class-08.jpg',
+      '/images/news/nepal-class-09.jpg',
+      '/images/news/nepal-class-10.jpg'
+    ]
+  },
   {date:"2026.02.08",title:"거제 참빛힐링센터 개소식",desc:"한화오션 외국인 근로자 1,800명 종합 지원",img:IMAGES.mission,tag:"현장"},
   {date:"2026.02.05",title:"베트남어 한국어 교육 플랫폼 오픈",desc:"700개 단어, 20단계 체계화 학습 과정",img:IMAGES.study,tag:"교육"},
   {date:"2026.02.01",title:"김해 CEO 네트워크 2월 정기모임",desc:"이주민 채용 및 상생 방안 논의",img:IMAGES.work,tag:"협력"},
@@ -755,8 +781,18 @@ return (
     
     <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20,marginBottom:40}}>
       {NEWS.map((n,i)=><div key={i} className="card fade-in" ref={addObserverRef} style={{borderRadius:20,background:'#fff',border:'1px solid #f0ede8',overflow:'hidden'}}>
-        <div style={{width:'100%',height:180,overflow:'hidden'}}>
-          <img src={n.img} style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .4s'}} alt={n.title}/>
+        <div style={{width:'100%',height:180,overflow:'hidden',position:'relative'}}>
+          {n.images?(
+            <>
+              {n.images.map((img,idx)=><div key={idx} style={{position:'absolute',inset:0,backgroundImage:`url(${img})`,backgroundSize:'cover',backgroundPosition:'center',opacity:newsSlideIndex===idx?1:0,transition:'opacity 1s ease-in-out'}}/> )}
+              {/* 슬라이드 인디케이터 */}
+              <div style={{position:'absolute',bottom:10,left:'50%',transform:'translateX(-50%)',display:'flex',gap:6,zIndex:2}}>
+                {n.images.map((_,idx)=><div key={idx} style={{width:8,height:8,borderRadius:'50%',background:newsSlideIndex===idx?'#fff':'rgba(255,255,255,.3)',transition:'all .3s'}}/>)}
+              </div>
+            </>
+          ):(
+            <img src={n.img} style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .4s'}} alt={n.title}/>
+          )}
         </div>
         <div style={{padding:'20px 20px 24px'}}>
           <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:10}}>
