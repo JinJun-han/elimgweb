@@ -549,6 +549,96 @@ return (
   </div>
 </section>
 
+{/* VIDEO SECTION - 이주민 연결 사역 홍보 */}
+<section style={{padding:'88px 24px',background:'linear-gradient(135deg,#FAF9F6,#F5F0EA)',position:'relative',overflow:'hidden'}}>
+  <div style={{position:'absolute',top:0,left:0,width:400,height:400,background:'radial-gradient(circle,rgba(199,123,63,.04),transparent)',pointerEvents:'none'}}/>
+  <div style={{position:'absolute',bottom:0,right:0,width:500,height:500,background:'radial-gradient(circle,rgba(27,73,101,.03),transparent)',pointerEvents:'none'}}/>
+  
+  <div style={{maxWidth:1100,margin:'0 auto',position:'relative'}}>
+    <div className="fade-in" ref={addObserverRef} style={{textAlign:'center',marginBottom:48}}>
+      <div style={{display:'inline-flex',alignItems:'center',gap:8,padding:'6px 18px',borderRadius:20,background:'rgba(231,76,60,.1)',color:'#e74c3c',marginBottom:16}}>
+        <div style={{width:8,height:8,borderRadius:'50%',background:'#e74c3c',animation:'pulse 1.5s ease-in-out infinite'}}/>
+        <span style={{fontSize:11,fontWeight:700,letterSpacing:1}}>WATCH NOW</span>
+      </div>
+      <h2 style={{fontFamily:CF,fontSize:'clamp(28px,4.5vw,44px)',fontWeight:600,color:'#2C2C2C',lineHeight:1.25,marginBottom:16}}>이주민과의 연결을 통한 사역</h2>
+      <p style={{fontSize:16,color:'#999',fontWeight:300,maxWidth:640,margin:'0 auto'}}>
+        안방에서 열방으로, 도움을 넘어 연결로<br/>
+        엘림G선교회의 비전과 사역을 영상으로 만나보세요
+      </p>
+      <div className="gline" style={{marginTop:20}}/>
+    </div>
+    
+    <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(480px,1fr))',gap:32,marginBottom:0}}>
+      {/* 유튜브 영상 - 이주민 연결 사역 */}
+      <div className="card fade-in" ref={addObserverRef} style={{borderRadius:24,background:'#fff',overflow:'hidden',boxShadow:'0 8px 32px rgba(0,0,0,.08)',border:'1px solid #EDE6DA'}}>
+        <div style={{position:'relative',paddingBottom:'56.25%',height:0,overflow:'hidden'}}>
+          <iframe 
+            style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',border:'none'}}
+            src="https://www.youtube.com/embed/cspMv85u3kE"
+            title="이주민과의 연결을 통한 사역"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <div style={{padding:'24px 28px'}}>
+          <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
+            <span style={{fontSize:24}}>🎬</span>
+            <h3 style={{fontSize:18,fontWeight:700,color:'#2C2C2C',margin:0}}>이주민과의 연결을 통한 사역</h3>
+          </div>
+          <p style={{fontSize:14,color:'#777',lineHeight:1.7,marginBottom:16}}>
+            한국에 찾아온 300만 이주민과 함께하는 글로컬 선교의 새로운 패러다임을 소개합니다. 
+            도움을 넘어 연결로, 경계를 넘어 가족으로 나아가는 엘림G선교회의 비전을 만나보세요.
+          </p>
+          <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+            <span style={{fontSize:11,padding:'4px 12px',borderRadius:12,background:'rgba(199,123,63,.08)',color:'#C77B3F',fontWeight:600}}>글로컬 선교</span>
+            <span style={{fontSize:11,padding:'4px 12px',borderRadius:12,background:'rgba(45,106,79,.08)',color:'#2D6A4F',fontWeight:600}}>이주민 사역</span>
+            <span style={{fontSize:11,padding:'4px 12px',borderRadius:12,background:'rgba(27,73,101,.08)',color:'#1B4965',fontWeight:600}}>공동체</span>
+          </div>
+        </div>
+      </div>
+      
+      {/* 엘림G선교회 소개 영상 */}
+      <div className="card fade-in" ref={addObserverRef} style={{borderRadius:24,background:'#fff',overflow:'hidden',boxShadow:'0 8px 32px rgba(0,0,0,.08)',border:'1px solid #EDE6DA'}}>
+        <div style={{position:'relative',paddingBottom:'56.25%',height:0,overflow:'hidden',background:'#000'}}>
+          <video 
+            style={{position:'absolute',top:0,left:0,width:'100%',height:'100%',objectFit:'contain'}}
+            controls
+            poster="/images/gallery/church-group.jpg"
+          >
+            <source src="/videos/elimg-introduction.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div style={{padding:'24px 28px'}}>
+          <div style={{display:'flex',alignItems:'center',gap:8,marginBottom:12}}>
+            <span style={{fontSize:24}}>📽️</span>
+            <h3 style={{fontSize:18,fontWeight:700,color:'#2C2C2C',margin:0}}>엘림G선교회 소개 영상</h3>
+          </div>
+          <p style={{fontSize:14,color:'#777',lineHeight:1.7,marginBottom:16}}>
+            엘림G선교회는 어떤 곳인가요? 우리의 4대 사역, 비전, 그리고 이주민들과 함께 걸어가는 
+            여정을 영상으로 소개합니다. 교회·일터·학교·삶의 모든 영역에서 다리가 되는 사역을 확인하세요.
+          </p>
+          <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>
+            <span style={{fontSize:11,padding:'4px 12px',borderRadius:12,background:'rgba(199,123,63,.08)',color:'#C77B3F',fontWeight:600}}>소개 영상</span>
+            <span style={{fontSize:11,padding:'4px 12px',borderRadius:12,background:'rgba(45,106,79,.08)',color:'#2D6A4F',fontWeight:600}}>4대 사역</span>
+            <span style={{fontSize:11,padding:'4px 12px',borderRadius:12,background:'rgba(27,73,101,.08)',color:'#1B4965',fontWeight:600}}>휴먼 브릿지</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div className="fade-in" ref={addObserverRef} style={{marginTop:40,textAlign:'center',padding:'28px 32px',borderRadius:20,background:'linear-gradient(135deg,rgba(199,123,63,.05),rgba(27,73,101,.05))',border:'1px solid rgba(199,123,63,.1)'}}>
+      <p style={{fontSize:14,color:'#666',lineHeight:1.8,marginBottom:16}}>
+        <strong style={{color:'#C77B3F',fontWeight:600}}>엘림G선교회</strong>와 함께 이주민 선교의 새로운 가능성을 열어가세요.<br/>
+        여러분의 후원과 기도가 연결의 다리를 더욱 튼튼하게 만듭니다.
+      </p>
+      <button className="btn" onClick={()=>scrollTo("involve")} style={{padding:'12px 28px',borderRadius:24,fontSize:14,fontWeight:600,background:'linear-gradient(135deg,#C77B3F,#D4A574)',color:'#fff',border:'none'}}>
+        함께하기 →
+      </button>
+    </div>
+  </div>
+</section>
+
 {/* ABOUT */}
 <section ref={r("about")} style={{padding:'100px 24px 88px',background:'#fff'}}>
   <div style={{maxWidth:1000,margin:'0 auto'}}>
