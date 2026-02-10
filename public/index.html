@@ -418,7 +418,14 @@ const NEWS=[
     ]
   },
   {date:"2026.02.05",title:"베트남어 한국어 교육 플랫폼 오픈",desc:"700개 단어, 20단계 체계화 학습 과정",img:IMAGES.study,tag:"교육"},
-  {date:"2026.02.01",title:"김해 CEO 네트워크 2월 정기모임",desc:"이주민 채용 및 상생 방안 논의",img:IMAGES.work,tag:"협력"},
+  {
+    date:"2026.02.01",
+    title:"엘림G선교회 2026년 사역 모임",
+    desc:"2026년 비전과 사역 계획 공유 - 이주민 선교의 새로운 도약",
+    tag:"사역",
+    videoUrl:"https://www.youtube.com/watch?v=He3VwrsRtd4",
+    videoThumbnail:"https://img.youtube.com/vi/He3VwrsRtd4/maxresdefault.jpg"
+  },
   {
     date:"2026.01.28",
     title:"한진준목사의 글로컬선교에 대한 강의와 설교",
@@ -891,9 +898,22 @@ return (
     </div>
     
     <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:20,marginBottom:40}}>
-      {NEWS.map((n,i)=><div key={i} className="card fade-in" ref={addObserverRef} style={{borderRadius:20,background:'#fff',border:'1px solid #f0ede8',overflow:'hidden'}}>
+      {NEWS.map((n,i)=><div key={i} className="card fade-in" ref={addObserverRef} style={{borderRadius:20,background:'#fff',border:'1px solid #f0ede8',overflow:'hidden'}} onClick={()=>{if(n.videoUrl)window.open(n.videoUrl,'_blank')}}>
         <div style={{width:'100%',height:180,overflow:'hidden',position:'relative'}}>
-          {n.images?(
+          {n.videoUrl?(
+            <>
+              <img src={n.videoThumbnail} style={{width:'100%',height:'100%',objectFit:'cover'}} alt={n.title}/>
+              <div style={{position:'absolute',inset:0,background:'rgba(0,0,0,.3)',display:'flex',alignItems:'center',justifyContent:'center',transition:'background .3s'}}>
+                <div style={{width:60,height:60,borderRadius:'50%',background:'rgba(255,0,0,.9)',display:'flex',alignItems:'center',justifyContent:'center',transition:'transform .3s'}}>
+                  <div style={{width:0,height:0,borderLeft:'18px solid #fff',borderTop:'12px solid transparent',borderBottom:'12px solid transparent',marginLeft:6}}/>
+                </div>
+              </div>
+              <div style={{position:'absolute',top:12,left:12,padding:'4px 12px',borderRadius:12,background:'rgba(255,0,0,.9)',color:'#fff',fontSize:11,fontWeight:700,display:'flex',alignItems:'center',gap:6}}>
+                <span>▶</span>
+                <span>YOUTUBE</span>
+              </div>
+            </>
+          ):n.images?(
             <>
               {n.images.map((img,idx)=><div key={idx} style={{position:'absolute',inset:0,backgroundImage:`url(${img})`,backgroundSize:'cover',backgroundPosition:'center',opacity:newsSlideIndex===idx?1:0,transition:'opacity 1s ease-in-out'}}/> )}
               {/* 슬라이드 인디케이터 */}
@@ -912,6 +932,10 @@ return (
           </div>
           <h3 style={{fontSize:16,fontWeight:700,color:'#2C2C2C',marginBottom:8,lineHeight:1.4}}>{n.title}</h3>
           <p style={{fontSize:13,color:'#777',lineHeight:1.6}}>{n.desc}</p>
+          {n.videoUrl&&<div style={{marginTop:12,fontSize:12,color:'#e74c3c',fontWeight:600,display:'flex',alignItems:'center',gap:6}}>
+            <span>▶</span>
+            <span>영상 보기</span>
+          </div>}
         </div>
       </div>)}
     </div>
